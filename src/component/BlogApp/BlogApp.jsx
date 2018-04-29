@@ -18,7 +18,7 @@ class BlogApp extends React.Component {
     const { routes  }= this.props;
     
     return (
-      <div>
+      <div className={style.testClass}>
         <div>
           <div className="App">
             <Header />
