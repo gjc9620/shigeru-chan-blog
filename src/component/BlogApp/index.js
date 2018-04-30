@@ -1,4 +1,4 @@
-// import './BlogApp.module.css';
+import './BlogApp.scss';
 
 export { default } from './BlogApp.jsx';
 
