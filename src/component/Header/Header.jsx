@@ -9,12 +9,12 @@ class Header extends React.Component {
   render() {
     return (
       <header className='header'>
-        <div>
-          <a
-            href="#Yuli Commissions"
-            className='logo'>
-            Yuli Commissions
-          </a>
+        <div className='logo'>
+          Shigeru-chan Commissions
+          <div className="status-text">
+            <span>Status: </span>
+            <span className='status'>CLOSED</span>
+          </div>
         </div>
       </header>
     )

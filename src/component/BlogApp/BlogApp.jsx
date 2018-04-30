@@ -8,11 +8,13 @@ class BlogApp extends React.Component {
     const { childRouter  }= this.props;
     
     return (
-      <div >
-        <div>
-          <div className="App">
-            <Header />
-          </div>
+      <div className='blog-app'>
+        <div className='page'>
+          <Header />
+          <main className='mian'>
+            { childRouter }
+          </main>
+          <footer>footer</footer>
         </div>
         {/*<ul>
           <li>
@@ -22,7 +24,6 @@ class BlogApp extends React.Component {
             <Link to="/gallery">gallery</Link>
           </li>
         </ul>*/}
-        { childRouter }
       </div>
     )
   }

@@ -1,8 +1,31 @@
 .header{
+  height: 150px;
+  position: relative;
 
   .logo {
     font-size: 35px;
+    //font-family: Verdana,marzo-w00-regular,fantasy;
+    font-family: marzo-w00-regular,fantasy;
+    color: #e8e8e8;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    text-align: left;
+    margin-bottom: 6px;
+
+    .status-text {
+      color: #8f8c80;
+      font-size: 16px;
+      font-family: raleway, sans-serif;
+      margin-top: 10px;
+
+      .status {
+        color: #cf1475;
+        font-weight: 400;
+      }
+    }
   }
+
 }
 
 
