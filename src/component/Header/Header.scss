@@ -8,16 +8,15 @@
     font-family: marzo-w00-regular,fantasy;
     color: #e8e8e8;
     position: absolute;
-    bottom: 30px;
+    bottom: 26px;
     left: 0px;
     text-align: left;
-    margin-bottom: 6px;
 
     .status-text {
       color: #8f8c80;
       font-size: 16px;
       font-family: raleway, sans-serif;
-      margin-top: 10px;
+      margin-top: 17px;
 
       .status {
         color: #cf1475;
@@ -26,6 +25,26 @@
     }
   }
 
+  nav {
+    display: flex;
+    font-family: "open sans", sans-serif;
+    position: absolute;
+    bottom: 30px;
+
+    right: 0px;
+    color: rgb(143, 143, 143);
+    font-size: 15px;
+
+    .item {
+      margin: 0 10px;
+      cursor: pointer;
+      transition: all 0.4s;
+
+      &:hover {
+        color: #F10A7A;
+      }
+    }
+  }
 }
 
 
