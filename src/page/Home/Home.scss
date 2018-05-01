@@ -4,16 +4,17 @@
 
   .show-info {
     margin-top: 20px;
+    margin-left: 15px;
     img {
-      width: 610px;
+      width: 600px;
     }
   }
 
   .info {
     text-align: left;
     position: absolute;
-    right: 0px;
-    width: 390px;
+    right: 10px;
+    width: 380px;
 
     .welcome {
       font: normal normal normal 23px/1.2em raleway,sans-serif;
