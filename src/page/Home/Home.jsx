@@ -1,4 +1,5 @@
 import React from 'react';
+import HR from '../../component/HR';
 
 class Header extends React.Component {
   // constructor(props) {
@@ -13,29 +14,32 @@ class Header extends React.Component {
           <img src={require('./show.webp')} alt=""/>
         </div>
         <div className='info'>
-          <div className='welcome'>
+          <h5 className='welcome'>
             Welcome
-          </div>
-          <div className='hr' />
-          <div>
-            Welcome to my commission info site!
-            Please read through everything before
-            ordering or signing up for my waiting list.
-          </div>
-          <div>
-            <div>Status: Closed</div>
-            <div>Waitlist: Closed</div>
-          </div>
-          <div>
-            <div>Find me at:</div>
-            <div className='hr' />
+          </h5>
+          <HR />
+          <div className='introduce'>
+            <div>Welcome to my commission info site!</div>
             <div>Please read through everything before</div>
             <div>ordering or signing up for my waiting list.</div>
-            <div>Twitter: @yulitanbo</div>
-            <div>Tumblr: http://yulipo.tumblr.com</div>
-            <div>Pixiv: http://pixiv.me/snd11</div>
-            <div>Contact: yulitanbo@gmail.com</div>
-            <div>header character belongs to @xiaociiao</div>
+          </div>
+          <div className='backboard'>
+            <div>
+              <span className='key'>Status:</span>
+              <span className='name'>Closed</span>
+            </div>
+            <div>
+              <span className='key'>Waitlist:</span>
+              <span className='name'>Closed</span>
+            </div>
+          </div>
+          <div className='about-me'>
+            <h5>Find me at:</h5>
+            <div className='hr' />
+            <p>Twitter: @<a href="">yulitanbo</a></p>
+            <p>Tumblr: <a href="">http://yulipo.tumblr.com</a></p>
+            <p>Pixiv: <a href="">http://pixiv.me/snd11</a></p>
+            <p>Contact: <a href="">yulitanbo@gmail.com</a></p>
           </div>
         </div>
         

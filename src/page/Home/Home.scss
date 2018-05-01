@@ -1,16 +1,72 @@
 .home-page {
   display: flex;
+  position: relative;
 
   .show-info {
+    margin-top: 20px;
     img {
-      width: 600px;
+      width: 610px;
     }
   }
 
   .info {
+    text-align: left;
+    position: absolute;
+    right: 0px;
+    width: 390px;
 
     .welcome {
       font: normal normal normal 23px/1.2em raleway,sans-serif;
+      margin: 0;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
+
+    .introduce {
+      margin-top: 15px;
+      letter-spacing: 0.1em;
+      font: normal normal normal 15px/1.5em 'Open Sans',sans-serif;
+    }
+
+    .backboard {
+      font: normal normal normal 20px/1.3em raleway,sans-serif;
+      background-color: rgba(48, 48, 48, 1);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+      border: 6px solid rgba(48, 48, 48, 1);
+      padding: 10px 30px ;
+      text-align: center;
+      margin: 30px 0;
+
+      .key {
+        color: #8F8F8F;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .name {
+        color: rgba(241,10,122,1);
+      }
+    }
+
+    .about-me {
+      text-align: right;
+
+      h5 {
+        margin: 10px 0px 5px 0px;
+        font: normal normal normal 23px/1.2em raleway,sans-serif;
+        color: #303030;
+      }
+
+      p {
+        letter-spacing: 0.1em;
+        font-family: nimbus-sans-tw01con,sans-serif;
+        line-height: 1.5em;
+
+        a {
+          color: rgba(241,10,122,1);
+          text-decoration: none;
+        }
+      }
+    }
+
   }
 }
