@@ -1,12 +1,21 @@
 .blog-app {
   text-align: center;
   min-height: 100%;
-  background: linear-gradient(#2f2f2f, #2f2f2f);
-  background-size: 100% 150px;
+  background: linear-gradient(#2f2f2f, #2f2f2f), linear-gradient(#eee, #eee);
+  background-size: 100% 150px, 100% 94px;
   background-repeat: no-repeat;
+  background-position: 0px 0px, bottom;
 
   .page {
     display: inline-block;
     width: 980px;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    height: 94px;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
   }
 }

@@ -14,7 +14,9 @@ class BlogApp extends React.Component {
           <main className='mian'>
             { childRouter }
           </main>
-          <footer>footer</footer>
+          <footer>
+            © 2017 Yuli. Proudly created
+          </footer>
         </div>
         {/*<ul>
           <li>
