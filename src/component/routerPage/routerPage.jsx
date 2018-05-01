@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from 'react';
+import { Route } from "react-router-dom";
 
 
 const RouteWithSubRoutes = route => (

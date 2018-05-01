@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from '../Header';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import routerPage from '../routerPage';
 
 class BlogApp extends React.Component {

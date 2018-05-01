@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+// import React from 'react';
 import Gallery  from '../page/Gallery';
 import Home  from '../page/Home';
 import BlogApp  from '../component/BlogApp';
