@@ -52,6 +52,7 @@
     "start": "node scripts/start.js",
     "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "shipit": "npm run build && rm -rf ../shigeruchan.github.io/*  &&  cp -rf ./build/* ../shigeruchan.github.io",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
