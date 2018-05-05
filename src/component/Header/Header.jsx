@@ -19,7 +19,20 @@ class Header extends React.Component {
         <nav>
           <div className='item'>Home</div>
           <div className='item'>Commission Terms</div>
-          <div className='item'>Prices</div>
+          <div className='item'>
+            <div className='nav-item'>Prices</div>
+            <div className='menu-list' >
+              <div className='menu-list-item'>Twitch Graphics</div>
+              <div className='menu-list-item'>Chibi</div>
+              <div className='menu-list-item'>Sketch</div>
+              <div className='menu-list-item'>Coloring Sketch</div>
+              <div className='menu-list-item'>Headshot</div>
+              <div className='menu-list-item'>Bust Up</div>
+              <div className='menu-list-item'>Waist Up</div>
+              <div className='menu-list-item'>Thigh up/Knee up</div>
+              <div className='menu-list-item'>FullBody</div>
+            </div>
+          </div>
           <div className='item'>Commission Form</div>
           <div className='item'>Question Form</div>
           <div className='item'>Waiting list</div>

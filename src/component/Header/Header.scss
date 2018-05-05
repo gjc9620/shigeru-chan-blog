@@ -34,14 +34,46 @@
     right: 0px;
     color: rgb(143, 143, 143);
     font-size: 15px;
+    line-height: 30px;
 
     .item {
       margin: 0 10px;
       cursor: pointer;
       transition: all 0.4s;
+      position: relative;
+
+      .menu-list {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 50%;
+        background-color: rgba(255, 255, 255, 1);
+        font: normal normal normal 15px/1.1em 'open sans',sans-serif;
+        box-shadow: 0.5px 1px 2px 1px #ededed;
+        z-index: 2;
+        transform: translateX(-50%);
+
+        .menu-list-item {
+          min-width: 152px;
+          cursor: pointer;
+          height: 100%;
+          box-sizing: border-box;
+          line-height: 30px;
+
+          &:hover {
+            color: #F10A7A;
+          }
+        }
+      }
 
       &:hover {
-        color: #F10A7A;
+        .nav-item{
+          color: #F10A7A;
+        }
+
+        .menu-list {
+          display: block;
+        }
       }
     }
   }
