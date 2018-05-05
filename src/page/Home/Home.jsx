@@ -11,7 +11,7 @@ class Header extends React.Component {
     return (
       <section className='home-page'>
         <div className='show-info'>
-          <img src={require('./show.webp')} alt=""/>
+          <img src={require('./show.png')} alt=""/>
         </div>
         <div className='info'>
           <h5 className='welcome'>
