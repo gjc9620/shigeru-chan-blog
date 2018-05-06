@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
   // constructor(props) {
@@ -33,10 +34,30 @@ class Header extends React.Component {
               <div className='menu-list-item nav-item'>FullBody</div>
             </div>
           </div>
-          <div className='item nav-item'>Commission Form</div>
-          <div className='item nav-item'>Question Form</div>
-          <div className='item nav-item'>Waiting list</div>
-          <div className='item nav-item'>Progress</div>
+          <div className='item nav-item'>
+            <a
+              href="https://www.cognitoforms.com/Shigeruchan/commissionformtoshigeruchan"
+              target='_blank'
+              rel="noopener noreferrer">Commission Form</a>
+          </div>
+          <div className='item nav-item'>
+            <a
+              href="http://www.123formbuilder.com/form-3709189/Question-Form"
+              target='_blank'
+              rel="noopener noreferrer">Question Form</a>
+          </div>
+          <div className='item nav-item'>
+            <a
+              href="https://docs.google.com/spreadsheets/d/1ACQ78otZPYTQAfnT0v2R0gvIbdWNH-4HkgTXer7JmWw"
+              target='_blank'
+              rel="noopener noreferrer">Waiting list</a>
+          </div>
+          <div className='item nav-item'>
+            <a
+              href="https://docs.google.com/spreadsheets/d/1JKIW7c2ZmkLx32aWMNIO8bDVLvrKLhM8lcrN18qrj9c/"
+              target='_blank'
+              rel="noopener noreferrer">Progress</a>
+          </div>
         </nav>
       </header>
     )

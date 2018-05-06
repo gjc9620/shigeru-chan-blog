@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import 'normalize.css';
 import routes from './router';
@@ -37,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className='app'>
           {routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
         </div>
         
