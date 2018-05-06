@@ -1,5 +1,6 @@
 import React from 'react';
 import Gallery  from '../page/Gallery';
+import CarouselPage  from '../page/CarouselPage';
 // import Home  from '../page/Home';
 import BlogApp  from '../component/BlogApp';
 
@@ -35,10 +36,10 @@ export default [{
   path: "/",
   component: BlogApp,
   routes: [
-    {
-      path: "/",
-      component: Foo,
-    },
+    // {
+    //   path: "/",
+    //   component: Foo,
+    // },
     {
       path: "/home",
       component: Foo,
@@ -46,6 +47,10 @@ export default [{
     {
       path: "/gallery",
       component: Gallery,
+    },
+    {
+      path: "/carousel",
+      component: CarouselPage,
     }
   ]
 }];

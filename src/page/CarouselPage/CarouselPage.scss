@@ -1,0 +1,42 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.carousel-page{
+  //display: flex;
+  //flex-direction: column;
+  .slider {
+    user-select: none;
+    padding: 0 30px;
+
+    .slick-slide img {
+      border: 5px solid #fff;
+      display: block;
+      margin: auto;
+    }
+
+    .slick-thumb li {
+      width: 60px;
+      height: 45px;
+    }
+
+    img {
+      max-width: 100%;
+      margin: 0 0 1.45rem;
+      padding: 0;
+    }
+
+    .slick-next:before, .slick-prev:before {
+      color: #000;
+    }
+
+    .slick-dots {
+      position: static;
+    }
+  }
+
+  //img {
+  //  width: 40px;
+  //  height: 40px;
+  //}
+}
+
