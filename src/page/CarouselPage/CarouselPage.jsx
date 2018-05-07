@@ -4,6 +4,10 @@ const baseUrl = 'https://s3.amazonaws.com/static.neostack.com/img/react-slick';
 
 class CenterMode extends React.Component {
   render() {
+    
+    this.props;
+    debugger
+    
     const settings = {
       customPaging: function(i) {
         return (

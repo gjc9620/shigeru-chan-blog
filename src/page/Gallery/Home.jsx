@@ -1,12 +1,14 @@
 import React from 'react';
 
-class Header extends React.Component {
+class Gallery extends React.Component {
   // constructor(props) {
   //   super(props);
   //   this.state = {};
   // }
   // componentDidMount() {}
   render() {
+    this.props
+    debugger
     return (
       <main className='main'>
         gallery
@@ -15,9 +17,9 @@ class Header extends React.Component {
   }
 }
 
-Header.defaultProps = {
+Gallery.defaultProps = {
 
 };
 
-export default Header;
+export default Gallery;
 

@@ -32,14 +32,13 @@ const Foo = asyncComponent(() =>
 )
 
 
-export default [{
-  path: "/",
+export default {
   component: BlogApp,
   routes: [
-    // {
-    //   path: "/",
-    //   component: Foo,
-    // },
+    {
+      path: "/",
+      component: Foo,
+    },
     {
       path: "/home",
       component: Foo,
@@ -53,4 +52,4 @@ export default [{
       component: CarouselPage,
     }
   ]
-}];
+};

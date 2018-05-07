@@ -1,17 +1,24 @@
 import React from 'react';
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import Gallery  from '../../page/Gallery';
+import CarouselPage  from '../../page/CarouselPage';
+import Home  from '../../page/Home';
 
 
-const RouteWithSubRoutes = route => (
-  <Route
-    path={route.path}
-    render={props => (
-      // pass the sub-routes down to keep nesting
-      <route.component {...props} routes={route.routes} />
-    )}
-  />
-);
-
+export const RouteWithSubRoutes = props => {
+  const { route = {}, match = {} } = props;
+  debugger
+  return (
+    <Route
+      path={`${match.url || ""}${route.path}`}
+      exact={route.path === '/'}
+      render={props => {
+        debugger
+        return <route.component {...props} routes={route.routes} />
+      }}
+    />
+  );
+};
 
 const routerPage = (Com)=>{
   return class extends React.Component {
@@ -21,12 +28,20 @@ const routerPage = (Com)=>{
     // }
     // componentDidMount() {}
     render() {
-      const { routes } = this.props;
+      const { routes = [], match } = this.props;
+      
+      if(routes.length === 0) {
+        return <Com {...this.props} />
+      }
       
       return (
         <Com
-          routes={routes}
-          childRouter={routes.map((route, i) => <RouteWithSubRoutes key={i} {...route} />)}
+          {...this.props}
+          childRouter={
+            <Switch>
+
+            </Switch>
+          }
           />
       )
     }
