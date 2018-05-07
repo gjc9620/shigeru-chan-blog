@@ -20,56 +20,67 @@ import 'normalize.css';
 //   />
 // );
 
+const genSwitch = (node, match = { url: '' })=>{
+  
+  return (
+    <Switch>
+      {
+        node.routes.map(((r)=>{
+          const {
+            path,
+            component: Component,
+            routes,
+          } = r;
+  
+          debugger
+          
+          return (
+            <Route
+              exact={path === '/'}
+              path={match.url+path}
+              render={(props)=><Component {...props} route={r} />}
+            />
+          )
+        }))
+      }
+    </Switch>
+  )
+}
 const routerPage = (Com)=>{
+  
   return class extends React.Component {
     render() {
-      const { routes = [], match } = this.props;
+      const {
+        route:{
+          routes = [],
+        } = {},
+        route,
+        match
+      } = this.props;
       
       if(routes.length === 0) {
         return <Com {...this.props} />
       }
       
-      debugger
-      
-      const rs = routes.map(((r)=>{
-        const {
-          path,
-          component: Component,
-          routes,
-        } = r;
-        
-        debugger
-        
-        return (
-          <Route
-            exact={path === '/'}
-            // path={match.url+path}
-            path={path}
-            render={(props)=><Component {...props} routes={routes} />}
-          />
-        )
-      }));
-      
-      debugger
       return (
         <Com
           {...this.props}
-          // childRouter={
-          //   <Switch>{rs}</Switch>
-          // }
-          childRouter={
-            rs
-          }
+          childRoute={genSwitch(route, match)}
         />
       )
     }
   }
-}
+};
 
-const routes = {
-  component: ()=>{
-    return (<p>XXXX</p>)
-  },
+const routeTree = {
+  path: '',
+  component: routerPage((props)=>{
+    debugger
+    return (<p>
+      XXXX
+      {props.childRoute}
+    </p>)
+  }),
   routes: [
     {
       path: "/",
@@ -77,10 +88,14 @@ const routes = {
     },
     {
       path: "/A",
-      component: routerPage((props)=><p>
-        /A
-        { props.childRoute }
-      </p>),
+      component: routerPage((props)=>{
+        return (
+          <p>
+            /A
+            { props.childRoute }
+          </p>
+        )
+      }),
       routes: [
         {
           path: "/",
@@ -88,7 +103,21 @@ const routes = {
         },
         {
           path: "/a",
-          component: ()=><p>/a</p>,
+          component: routerPage((props)=><p>a{props.childRoute}</p>),
+          routes: [
+            {
+              path: "/",
+              component: ()=><p>/</p>,
+            },
+            {
+              path: "/a",
+              component: ()=><p>a</p>,
+            },
+            {
+              path: "/b",
+              component: ()=><p>/b</p>,
+            },
+          ]
         },
         {
           path: "/b",
@@ -109,31 +138,41 @@ const routes = {
       component: ()=><p>carousel</p>,
     }
   ],
-}
+};
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className='app'>
-          <Switch>
-            {
-              routes.routes.map(((r)=>{
-                const {
-                  path,
-                  component: Component,
-                  routes,
-                } = r;
-                return (
-                  <Route
-                    exact={path === '/'}
-                    path={path}
-                    render={(props)=><Component {...props} routes={routes} />}
-                    />
-                )
-              }))
-            }
-          </Switch>
+          
+          { genSwitch(routeTree) }
+  
+          {/*<Switch>
+            <Route exact path="/" component={()=><p>/</p>} />
+            <Route path="/about" component={()=><p>About</p>} />
+            <Route path="/topics" component={({ match })=>{
+              return <div>
+                asdsadasd
+                <switch>
+                  <Route exact path={`${match.url}/`} component={()=><div>/</div>} />
+                  <Route path={`${match.url}/a`} component={()=><div>a</div>} />
+                  <Route path={`${match.url}/b`} component={({match})=>{
+                    return (
+                      <switch>
+                        <Route exact path={`${match.url}/`} component={()=><div>/</div>} />
+                        <Route path={`${match.url}/a`} component={()=><div>a</div>} />
+                        <Route path={`${match.url}/b`} component={()=>{
+                          return <div>b</div>
+                        }} />
+                      </switch>
+                    )
+                  }} />
+                </switch>
+              </div>
+            }} />
+          </Switch>*/}
+  
           {/*<Switch>*/}
             {/*<Route exact path={`/`} render={(props)=><Home {...props} />} />*/}
             {/*<Route path={`/home`} render={Home} />*/}
