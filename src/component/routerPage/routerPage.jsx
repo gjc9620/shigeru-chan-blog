@@ -1,34 +1,40 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
-import Gallery  from '../../page/Gallery';
-import CarouselPage  from '../../page/CarouselPage';
-import Home  from '../../page/Home';
 
-
-export const RouteWithSubRoutes = props => {
-  const { route = {}, match = {} } = props;
-  debugger
+export const genSwitch = (node, match = { url: '' })=>{
   return (
-    <Route
-      path={`${match.url || ""}${route.path}`}
-      exact={route.path === '/'}
-      render={props => {
-        debugger
-        return <route.component {...props} routes={route.routes} />
-      }}
-    />
-  );
-};
-
+    <Switch>
+      {
+        node.routes.map(((r)=>{
+          const {
+            path,
+            component: Component,
+            // routes,
+          } = r;
+          
+          return (
+            <Route
+              exact={path === '/'}
+              path={match.url+path}
+              render={(props)=><Component {...props} route={r} />}
+            />
+          )
+        }))
+      }
+    </Switch>
+  )
+}
 const routerPage = (Com)=>{
+  
   return class extends React.Component {
-    // constructor(props) {
-    //   super(props);
-    //   this.state = {};
-    // }
-    // componentDidMount() {}
     render() {
-      const { routes = [], match } = this.props;
+      const {
+        route:{
+          routes = [],
+        } = {},
+        route,
+        match
+      } = this.props;
       
       if(routes.length === 0) {
         return <Com {...this.props} />
@@ -37,16 +43,12 @@ const routerPage = (Com)=>{
       return (
         <Com
           {...this.props}
-          childRouter={
-            <Switch>
-
-            </Switch>
-          }
-          />
+          childRoute={genSwitch(route, match)}
+        />
       )
     }
   }
-}
+};
 
 export default routerPage;
 

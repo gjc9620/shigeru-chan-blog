@@ -4,14 +4,14 @@ import routerPage from '../routerPage';
 
 class BlogApp extends React.Component {
   render(){
-    const { childRouter  }= this.props;
+    const { childRoute  }= this.props;
     
     return (
       <div className='blog-app'>
         <div className='page'>
           <Header />
           <main className='mian'>
-            { childRouter }
+            { childRoute }
           </main>
           <footer>
             © 2017 Yuli. Proudly created

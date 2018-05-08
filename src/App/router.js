@@ -1,8 +1,8 @@
 import React from 'react';
-import Gallery  from '../page/Gallery';
+// import Gallery  from '../page/Gallery';
 import CarouselPage  from '../page/CarouselPage';
+import routerPage from "../component/routerPage/routerPage";
 // import Home  from '../page/Home';
-import BlogApp  from '../component/BlogApp';
 
 function asyncComponent(getComponent) {
   return class AsyncComponent extends React.Component {
@@ -33,7 +33,6 @@ const Foo = asyncComponent(() =>
 
 
 export default {
-  component: BlogApp,
   routes: [
     {
       path: "/",
@@ -41,12 +40,24 @@ export default {
     },
     {
       path: "/home",
-      component: Foo,
+      component: ()=><p>home</p>,
     },
     {
-      path: "/gallery",
-      component: Gallery,
+      path: "/p",
+      component: routerPage(({childRoute})=>{
+        return <div>home{childRoute}</div>
+      }),
+      routes: [
+        {
+          path: "/yeah",
+          component: ()=><p>yeah</p>
+        }
+      ]
     },
+    // {
+    //   path: "/gallery",
+    //   component: Gallery,
+    // },
     {
       path: "/carousel",
       component: CarouselPage,
