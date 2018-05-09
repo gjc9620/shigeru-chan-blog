@@ -11,6 +11,14 @@ const CarouselPage = asyncComponent(() =>
   import('../page/CarouselPage').then(module => module.default)
 );
 
+// const {
+//   Home,
+//   CarouselPage,
+// } = asyncRouterBT(
+//   '../page/Home',
+//   '../page/CarouselPage'
+// )
+
 export default {
   routes: [
     {
