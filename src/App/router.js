@@ -1,42 +1,21 @@
 import React from 'react';
 // import Gallery  from '../page/Gallery';
-import CarouselPage  from '../page/CarouselPage';
 import routerPage from "../component/routerPage/routerPage";
-// import Home  from '../page/Home';
+import asyncComponent from '../component/asyncComponent';
 
-function asyncComponent(getComponent) {
-  return class AsyncComponent extends React.Component {
-    static Component = null;
-    state = { Component: AsyncComponent.Component };
-    
-    componentWillMount() {
-      if (!this.state.Component) {
-        getComponent().then(Component => {
-          AsyncComponent.Component = Component
-          this.setState({ Component })
-        })
-      }
-    }
-    render() {
-      const { Component } = this.state
-      if (Component) {
-        return <Component {...this.props} />
-      }
-      return null
-    }
-  }
-}
-
-const Foo = asyncComponent(() =>
+const Home = asyncComponent(() =>
   import('../page/Home').then(module => module.default)
-)
+);
 
+const CarouselPage = asyncComponent(() =>
+  import('../page/CarouselPage').then(module => module.default)
+);
 
 export default {
   routes: [
     {
       path: "/",
-      component: Foo,
+      component: Home,
     },
     {
       path: "/home",
