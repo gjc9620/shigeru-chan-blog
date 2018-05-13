@@ -2,13 +2,31 @@ import React from 'react';
 import Slider from "react-slick";
 import HR from "../../component/HR";
 
+const pages = {
+  TwitchGraphic : {
+    imgs:{
+      origin: [
+        require('./a0.png'),
+        require('./a1.png'),
+        require('./a2.png'),
+      ],
+      thumbnail: [
+        require('./a0.png'),
+        require('./a1.png'),
+        require('./a2.png'),
+      ],
+    },
+  }
+}
+
 class CenterMode extends React.Component {
   render() {
     const settings = {
       customPaging: function(i) {
+        const thumbnail = pages.TwitchGraphic.imgs.thumbnail[i];
         return (
           <a>
-            <img src={require('./a1.png')} />
+            <img src={thumbnail} />
           </a>
         );
       },
@@ -23,10 +41,10 @@ class CenterMode extends React.Component {
       <div>
         <Slider {...settings}>
           {
-            [1,1,1,1,1,1].map(u=>{
+            pages.TwitchGraphic.imgs.origin.map(img=>{
               return (
                 <div>
-                  <img src={require('./a1.png')} />
+                  <img src={img} />
                 </div>
               )
             })

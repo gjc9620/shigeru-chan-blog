@@ -23,10 +23,15 @@
         margin: auto;
       }
 
-      .slick-thumb li {
-        width: 60px;
-        height: 45px;
+      .slick-thumb{
+        margin-top: 10px;
+
+        li {
+          width: 60px;
+          height: 45px;
+        }
       }
+
 
       img {
         max-width: 100%;
