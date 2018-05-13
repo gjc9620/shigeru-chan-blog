@@ -16,6 +16,7 @@ export const genSwitch = (node, match = { url: '' })=>{
             <Route
               exact={path === '/'}
               path={match.url+path}
+              key={match.url+path}
               render={(props)=><Component {...props} route={r} />}
             />
           )

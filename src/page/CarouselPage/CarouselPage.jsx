@@ -26,7 +26,7 @@ class CenterMode extends React.Component {
         const thumbnail = pages.TwitchGraphic.imgs.thumbnail[i];
         return (
           <a>
-            <img src={thumbnail} />
+            <img src={thumbnail} alt='oops' />
           </a>
         );
       },
@@ -41,10 +41,10 @@ class CenterMode extends React.Component {
       <div>
         <Slider {...settings}>
           {
-            pages.TwitchGraphic.imgs.origin.map(img=>{
+            pages.TwitchGraphic.imgs.origin.map((img, i)=>{
               return (
                 <div>
-                  <img src={img} />
+                  <img src={img} key={i} alt='oops'/>
                 </div>
               )
             })
