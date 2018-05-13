@@ -42,7 +42,7 @@ class Header extends React.Component {
           </div>
           <div className='item nav-item'>
             <a
-              href="https://www.cognitoforms.com/Shigeruchan/commissionformtoshigeruchan"
+              href="https://www.cognitoforms.com/Shigeruchan/DigitalArtCommissionFormToShigeruchan"
               target='_blank'
               rel="noopener noreferrer">Commission Form</a>
           </div>
