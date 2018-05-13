@@ -1,5 +1,6 @@
 import React from 'react';
 import HR from '../../component/HR';
+import { Link } from 'react-router-dom';
 
 class CommissionPolicy extends React.Component {
   // constructor(props) {
@@ -14,7 +15,8 @@ class CommissionPolicy extends React.Component {
           <HR/>
           <span>Commission Policy</span>
         </h2>
-        <div>PLEASE READ carefully before commissioning me. Thank you!</div>
+        <div>PLEASE READ my TOS carefully before commissioning me. Thank you!</div>
+        <div><Link to="DrawFAQ" >please click here to read "What will I draw and won't draw"</Link></div>
         <h2>GENERAL INFO</h2>
         <div>
           <ul>

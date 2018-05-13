@@ -11,10 +11,12 @@ const [
   Home,
   CarouselPage,
   CommissionPolicy,
+  DrawFAQ,
 ] = [
   ()=>import('../page/Home'),
   ()=>import('../page/CarouselPage'),
   ()=>import('../page/CommissionPolicy'),
+  ()=>import('../page/DrawFAQ'),
 ].map(load);
 
 export default {
@@ -30,6 +32,10 @@ export default {
     {
       path: "/CommissionPolicy",
       component: CommissionPolicy,
+    },
+    {
+      path: "/DrawFAQ",
+      component: DrawFAQ,
     },
     {
       path: "/p",
