@@ -21,7 +21,9 @@ class Header extends React.Component {
           <div className='item nav-item'>
             <Link to='/'>Home</Link>
           </div>
-          <div className='item nav-item'>Commission Terms</div>
+          <div className='item nav-item'>
+            <Link to='/CommissionPolicy'>Commission Terms</Link>
+          </div>
           <div className='item nav-item'>
             Prices
             <div className='menu-list' >

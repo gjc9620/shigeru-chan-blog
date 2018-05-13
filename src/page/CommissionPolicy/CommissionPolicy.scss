@@ -1,0 +1,33 @@
+.commission-policy{
+  text-align: left;
+
+  span {
+    display: inline-block;
+    margin-left: 10px;
+    font: normal normal normal 19px/1.1em raleway,sans-serif;
+    font-weight: bold;
+  }
+
+  ul {
+    padding-left: 1.3em;
+    margin-left: 0.5em;
+
+    li {
+      font: normal normal normal 15px/1.5em 'Open Sans',sans-serif;
+      margin-bottom: 10px;
+
+      a {
+        transition: all 0.5s;
+
+        &:hover {
+          color: #FFF;
+          background: rgb(241, 10, 122);
+          //text-shadow: 1px 1px;
+        }
+      }
+
+    }
+  }
+
+}
+

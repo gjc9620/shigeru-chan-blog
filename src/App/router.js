@@ -10,9 +10,11 @@ const load = (loadFun)=> asyncComponent(() =>
 const [
   Home,
   CarouselPage,
+  CommissionPolicy,
 ] = [
   ()=>import('../page/Home'),
   ()=>import('../page/CarouselPage'),
+  ()=>import('../page/CommissionPolicy'),
 ].map(load);
 
 export default {
@@ -23,7 +25,11 @@ export default {
     },
     {
       path: "/home",
-      component: ()=><p>home</p>,
+      component: Home,
+    },
+    {
+      path: "/CommissionPolicy",
+      component: CommissionPolicy,
     },
     {
       path: "/p",
