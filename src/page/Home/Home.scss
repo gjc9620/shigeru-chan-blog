@@ -64,7 +64,13 @@
 
         a {
           color: rgba(241,10,122,1);
-          text-decoration: none;
+          transition: all 0.5s;
+
+          &:hover {
+            color: #FFF;
+            background: rgb(241, 10, 122);
+            //text-shadow: 1px 1px;
+          }
         }
       }
     }

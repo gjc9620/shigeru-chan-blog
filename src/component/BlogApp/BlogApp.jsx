@@ -14,7 +14,7 @@ class BlogApp extends React.Component {
             { childRoute }
           </main>
           <footer>
-            © 2017 Yuli. Proudly created
+            © 2018 Shigeru-chan.
           </footer>
         </div>
         {/*<ul>
