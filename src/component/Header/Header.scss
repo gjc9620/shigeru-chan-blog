@@ -29,6 +29,10 @@
   .nav-item {
     color: rgb(143, 143, 143);
 
+    a {
+      color: inherit;
+    }
+
     .menu-list {
       opacity: 0;
       z-index: -1;
@@ -82,18 +86,6 @@
           //}
         }
       }
-
-
-
-      //&:hover {
-      //  .nav-item{
-      //    color: #F10A7A;
-      //  }
-      //
-      //  .menu-list {
-      //    display: block;
-      //  }
-      //}
     }
 
   }

@@ -4,35 +4,79 @@
 .carousel-page{
   //display: flex;
   //flex-direction: column;
-  .slider {
-    user-select: none;
-    padding: 0 30px;
 
-    .slick-slide img {
-      border: 5px solid #fff;
-      display: block;
-      margin: auto;
+  figure {
+    display: flex;
+    margin: 0px;
+    margin-top: 10px;
+    width: 100%;
+
+    .slider {
+      margin-top: 10px;
+      user-select: none;
+      padding: 0 30px;
+      width: 500px;
+
+      .slick-slide img {
+        border: 5px solid #fff;
+        display: block;
+        margin: auto;
+      }
+
+      .slick-thumb li {
+        width: 60px;
+        height: 45px;
+      }
+
+      img {
+        max-width: 100%;
+        margin: 0 0 1.45rem;
+        padding: 0;
+      }
+
+      .slick-next:before, .slick-prev:before {
+        color: #000;
+      }
+
+      .slick-dots {
+        position: static;
+      }
     }
 
-    .slick-thumb li {
-      width: 60px;
-      height: 45px;
-    }
+    figcaption {
+      margin-top: 10px;
+      margin-left: 50px;
+      flex: 1;
+      text-align: left;
 
-    img {
-      max-width: 100%;
-      margin: 0 0 1.45rem;
-      padding: 0;
-    }
+      h4 {
+        font: normal normal normal 23px/1.2em raleway,sans-serif;
+        margin: 0px;
+      }
 
-    .slick-next:before, .slick-prev:before {
-      color: #000;
-    }
+      ul {
+        padding-left: 1.3em;
+        margin-left: 0.5em;
 
-    .slick-dots {
-      position: static;
+        li {
+          font: normal normal normal 15px/1.5em 'Open Sans',sans-serif;
+          margin-bottom: 10px;
+
+          a {
+            transition: all 0.5s;
+
+            &:hover {
+              color: #FFF;
+              background: rgb(241, 10, 122);
+              //text-shadow: 1px 1px;
+            }
+          }
+
+        }
+      }
     }
   }
+
 
   //img {
   //  width: 40px;

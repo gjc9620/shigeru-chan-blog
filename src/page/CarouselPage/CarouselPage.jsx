@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from "react-slick";
-const baseUrl = 'https://s3.amazonaws.com/static.neostack.com/img/react-slick';
+import HR from "../../component/HR";
 
 class CenterMode extends React.Component {
   render() {
@@ -8,7 +8,7 @@ class CenterMode extends React.Component {
       customPaging: function(i) {
         return (
           <a>
-            <img src={require('./touma3.png')} />
+            <img src={require('./a1.png')} />
           </a>
         );
       },
@@ -21,23 +21,16 @@ class CenterMode extends React.Component {
     };
     return (
       <div>
-        <h2>Custom Paging</h2>
         <Slider {...settings}>
-          <div>
-            <img src={require('./touma3.png')} />
-          </div>
-          <div>
-            <img src={baseUrl + "/abstract02.jpg"} />
-          </div>
-          <div>
-            <img src={baseUrl + "/abstract03.jpg"} />
-          </div>
-          <div>
-            <img src={baseUrl + "/abstract04.jpg"} />
-          </div>
-          <div>
-            <img src={baseUrl + "/abstract04.jpg"} />
-          </div>
+          {
+            [1,1,1,1,1,1].map(u=>{
+              return (
+                <div>
+                  <img src={require('./a1.png')} />
+                </div>
+              )
+            })
+          }
         </Slider>
       </div>
     );
@@ -52,9 +45,28 @@ class CarouselPage extends React.Component {
   render() {
     return (
       <section className='carousel-page'>
-        <div className='slider'>
-          <CenterMode />
-        </div>
+        {/*<h2>Twitch Graphics</h2>*/}
+        <figure >
+          <div className='slider'>
+            <CenterMode />
+          </div>
+          <figcaption>
+            <h4 >Twitch Graphic</h4>
+            <HR/>
+            <ul>
+              <li>
+                <div>Price: $25 USD each</div>
+                <div>Transparent background</div>
+                <div>Max. 1 character only on a canvas</div>
+              </li>
+              <li>Twitch Emotes: File size: 112x112 px, 56x56 px, 28x28 px 350 dpi</li>
+              <li>Twitch badges: File size: 72x72 px, 36x36 px, 18x18 px 350 dpi
+              </li>
+              <li>Plus the original file: 1000x1000 px</li>
+              <li>Twitch Sample on my <a href="https://shigeru-chan.deviantart.com/gallery/65740177/Twitch-Emotes">Deviantart</a></li>
+            </ul>
+          </figcaption>
+        </figure>
       </section>
     )
   }
