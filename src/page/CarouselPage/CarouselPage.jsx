@@ -43,8 +43,8 @@ class CenterMode extends React.Component {
           {
             pages.TwitchGraphic.imgs.origin.map((img, i)=>{
               return (
-                <div>
-                  <img src={img} key={i} alt='oops'/>
+                <div key={i}>
+                  <img src={img}  alt='oops'/>
                 </div>
               )
             })
