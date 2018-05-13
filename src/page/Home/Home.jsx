@@ -1,7 +1,7 @@
 import React from 'react';
 import HR from '../../component/HR';
 
-class Header extends React.Component {
+class Home extends React.Component {
   // constructor(props) {
   //   super(props);
   //   this.state = {};
@@ -52,9 +52,9 @@ class Header extends React.Component {
   }
 }
 
-Header.defaultProps = {
+Home.defaultProps = {
 
 };
 
-export default Header;
+export default Home;
 

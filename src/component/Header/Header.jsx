@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
   // constructor(props) {
@@ -14,16 +14,20 @@ class Header extends React.Component {
           Shigeru-chan Commissions
           <div className="status-text">
             <span>Status: </span>
-            <span className='status'>CLOSED</span>
+            <span className='status'>OPEN</span>
           </div>
         </div>
         <nav>
-          <div className='item nav-item'>Home</div>
+          <div className='item nav-item'>
+            <Link to='/'>Home</Link>
+          </div>
           <div className='item nav-item'>Commission Terms</div>
           <div className='item nav-item'>
             Prices
             <div className='menu-list' >
-              <div className='menu-list-item nav-item'>Twitch Graphics</div>
+              <div className='menu-list-item nav-item'>
+                <Link to='/twitchGraphics'>Twitch Graphics</Link>
+              </div>
               <div className='menu-list-item nav-item'>Chibi</div>
               <div className='menu-list-item nav-item'>Sketch</div>
               <div className='menu-list-item nav-item'>Coloring Sketch</div>

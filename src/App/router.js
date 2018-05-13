@@ -3,21 +3,17 @@ import React from 'react';
 import routerPage from "../component/routerPage/routerPage";
 import asyncComponent from '../component/asyncComponent';
 
-const Home = asyncComponent(() =>
-  import('../page/Home').then(module => module.default)
+const load = (loadFun)=> asyncComponent(() =>
+  loadFun().then(module => module.default)
 );
 
-const CarouselPage = asyncComponent(() =>
-  import('../page/CarouselPage').then(module => module.default)
-);
-
-// const {
-//   Home,
-//   CarouselPage,
-// } = asyncRouterBT(
-//   '../page/Home',
-//   '../page/CarouselPage'
-// )
+const [
+  Home,
+  CarouselPage,
+] = [
+  ()=>import('../page/Home'),
+  ()=>import('../page/CarouselPage'),
+].map(load);
 
 export default {
   routes: [
@@ -46,7 +42,7 @@ export default {
     //   component: Gallery,
     // },
     {
-      path: "/carousel",
+      path: "/twitchGraphics",
       component: CarouselPage,
     }
   ]
