@@ -44,7 +44,7 @@ class Header extends React.Component {
             <a
               href="https://www.cognitoforms.com/Shigeruchan/DigitalArtCommissionFormToShigeruchan"
               target='_blank'
-              rel="noopener noreferrer">Commission Form</a>
+              rel="noopener noreferrer">Order Form</a>
           </div>
           <div className='item nav-item'>
             <a
@@ -54,15 +54,9 @@ class Header extends React.Component {
           </div>
           <div className='item nav-item'>
             <a
-              href="https://docs.google.com/spreadsheets/d/1ACQ78otZPYTQAfnT0v2R0gvIbdWNH-4HkgTXer7JmWw"
-              target='_blank'
-              rel="noopener noreferrer">Waiting list</a>
-          </div>
-          <div className='item nav-item'>
-            <a
               href="https://docs.google.com/spreadsheets/d/1JKIW7c2ZmkLx32aWMNIO8bDVLvrKLhM8lcrN18qrj9c/"
               target='_blank'
-              rel="noopener noreferrer">Progress</a>
+              rel="noopener noreferrer">Waiting list & Progress</a>
           </div>
         </nav>
       </header>
